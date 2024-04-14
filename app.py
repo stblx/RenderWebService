@@ -1,7 +1,9 @@
 import requests
 from flask import Flask
 from markupsafe import escape
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app, origins='*')
 
 @app.route('/aviationweather/<airport>')
 def index(airport):
