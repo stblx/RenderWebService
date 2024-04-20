@@ -21,3 +21,10 @@ def index(airport):
         ret = restext + restext1
         
     return ret
+
+@app.route('/appcontinue')
+def appcontinue():
+    re = requests.get("https://renderwebserviceappcontinue.onrender.com/appcontinue")
+    restext = re.text
+    restext = "ok_from_app"
+    return restext
